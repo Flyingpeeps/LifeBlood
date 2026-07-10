@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dxhyyiy64xp2w"]
 
 [ext_resource type="Script" uid="uid://co7q6l6whnq4u" path="res://Scripts/main_menu.gd" id="1_vkhyn"]
+[ext_resource type="Texture2D" uid="uid://b3pplfopotd2r" path="res://Assets/Art/MainMenu/Play_Stone.png" id="2_tlgvt"]
+[ext_resource type="Script" uid="uid://blq1sbir7acg2" path="res://Scripts/ButtonPop.gd" id="3_ccgj5"]
+[ext_resource type="Texture2D" uid="uid://d2qaibxixxum6" path="res://Assets/Art/MainMenu/Settings_Stone.png" id="3_ssnd4"]
 
 [node name="Main menu" type="Node2D" unique_id=645651199]
 script = ExtResource("1_vkhyn")
@@ -11,30 +14,43 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="play" type="Button" parent="Button Manager" unique_id=968020190]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button Manager" unique_id=982614189]
+
+[node name="play" type="TextureButton" parent="Button Manager" unique_id=826349886]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 44.0
+offset_top = 168.0
+offset_right = 300.0
+offset_bottom = 256.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_tlgvt")
+stretch_mode = 5
+script = ExtResource("3_ccgj5")
+
+[node name="settings" type="TextureButton" parent="Button Manager" unique_id=480691901]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 192.0
-offset_right = 256.0
-offset_bottom = 256.0
-text = "Play"
+offset_top = 320.0
+offset_right = 328.0
+offset_bottom = 384.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_ssnd4")
+stretch_mode = 5
+script = ExtResource("3_ccgj5")
 
-[node name="quit" type="Button" parent="Button Manager" unique_id=515585122]
+[node name="quit" type="TextureButton" parent="Button Manager" unique_id=126700668]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 448.0
 offset_right = 256.0
 offset_bottom = 512.0
-text = "Quit"
-
-[node name="settings" type="Button" parent="Button Manager" unique_id=2420011]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 320.0
-offset_right = 256.0
-offset_bottom = 384.0
-text = "Settings"
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("3_ccgj5")
 
 [connection signal="pressed" from="Button Manager/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Button Manager/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Button Manager/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Button Manager/quit" to="." method="_on_quit_pressed"]
