@@ -9,6 +9,7 @@ const hitSound = preload("res://Assets/Sound/Effects/Hit.wav") # Preload sounds 
 const blingSound = preload("res://Assets/Sound/Effects/Hit.wav")
 const boingSound = preload("res://Assets/Sound/Effects/inverted_boing.wav") 
 
+var AudioDebug = false
 
 func _ready() -> void:
 	mouse_entered.connect(_on_mouse_entered) 
@@ -24,6 +25,9 @@ func _on_mouse_entered() -> void:
 	if sound_node is AudioStreamPlayer: #Play loaded sound if audio stream player is valid
 		sound_node.stream = hitSound
 		sound_node.play() 
+		
+		if AudioDebug == true:
+			print("A piece of audio has allegedly been played")
 
 
 func _on_mouse_exited() -> void:
@@ -33,6 +37,10 @@ func _on_mouse_exited() -> void:
 		.set_ease(Tween.EASE_OUT)
 		
 	var sound_node = get_node_or_null(audio_player_path)
+	
 	if sound_node is AudioStreamPlayer: #Play loaded sound if audio stream player is valid
 		sound_node.stream = boingSound
 		sound_node.play()
+		
+		if AudioDebug == true:
+			print("A piece of audio has allegedly been played")
