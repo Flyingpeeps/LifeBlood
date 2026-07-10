@@ -4,12 +4,12 @@ extends TextureButton
 @export var default_scale : Vector2 = Vector2(1.0, 1.0) # Regular scale while unpopped
 @export var tween_duration : float = 0.08 # Duration of pop
 @export var audio_player_path : NodePath # Audio player
+@export var AudioDebug = false
 
 const hitSound = preload("res://Assets/Sound/Effects/Hit.wav") # Preload sounds to avoid weird errors...?
 const blingSound = preload("res://Assets/Sound/Effects/Hit.wav")
 const boingSound = preload("res://Assets/Sound/Effects/inverted_boing.wav") 
 
-var AudioDebug = false
 
 func _ready() -> void:
 	mouse_entered.connect(_on_mouse_entered) 
