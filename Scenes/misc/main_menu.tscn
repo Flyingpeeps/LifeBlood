@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b3pplfopotd2r" path="res://Assets/Art/MainMenu/Play_Stone.png" id="2_tlgvt"]
 [ext_resource type="Script" uid="uid://blq1sbir7acg2" path="res://Scripts/ButtonPop.gd" id="3_ccgj5"]
 [ext_resource type="Texture2D" uid="uid://d2qaibxixxum6" path="res://Assets/Art/MainMenu/Settings_Stone.png" id="3_ssnd4"]
-[ext_resource type="AudioStream" uid="uid://wpif46yhtts7" path="res://Assets/Sound/Music/Title/full.wav" id="5_ccgj5"]
 [ext_resource type="Texture2D" uid="uid://dopjkpo0kclta" path="res://Assets/Art/MainMenu/Title.png" id="5_w60tn"]
+[ext_resource type="AudioStream" uid="uid://b3evere3fmy32" path="res://Assets/Sound/Music/Title/Clean.wav" id="6_w60tn"]
 
 [node name="Main menu" type="Node2D" unique_id=645651199]
 script = ExtResource("1_vkhyn")
@@ -75,7 +75,7 @@ hover_scale = Vector2(1.01, 1.01)
 tween_duration = 0.945
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=320784864]
-stream = ExtResource("5_ccgj5")
+stream = ExtResource("6_w60tn")
 autoplay = true
 bus = &"Music"
 
