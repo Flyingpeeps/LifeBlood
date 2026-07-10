@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://blq1sbir7acg2" path="res://Scripts/ButtonPop.gd" id="3_ccgj5"]
 [ext_resource type="Texture2D" uid="uid://d2qaibxixxum6" path="res://Assets/Art/MainMenu/Settings_Stone.png" id="3_ssnd4"]
 [ext_resource type="AudioStream" uid="uid://wpif46yhtts7" path="res://Assets/Sound/Music/Title/full.wav" id="5_ccgj5"]
+[ext_resource type="Texture2D" uid="uid://dopjkpo0kclta" path="res://Assets/Art/MainMenu/Title.png" id="5_w60tn"]
 
 [node name="Main menu" type="Node2D" unique_id=645651199]
 script = ExtResource("1_vkhyn")
@@ -23,10 +24,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 44.0
-offset_top = 168.0
-offset_right = 300.0
-offset_bottom = 256.0
+offset_left = 36.0
+offset_top = 240.0
+offset_right = 292.0
+offset_bottom = 328.0
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_tlgvt")
@@ -35,10 +36,10 @@ script = ExtResource("3_ccgj5")
 
 [node name="settings" type="TextureButton" parent="Button Manager" unique_id=480691901]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 320.0
-offset_right = 328.0
-offset_bottom = 384.0
+offset_left = 56.0
+offset_top = 392.0
+offset_right = 320.0
+offset_bottom = 456.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_ssnd4")
 stretch_mode = 5
@@ -52,6 +53,23 @@ offset_right = 256.0
 offset_bottom = 512.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("3_ccgj5")
+
+[node name="title" type="TextureButton" parent="Button Manager" unique_id=1994315248]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 292.0
+offset_top = 32.0
+offset_right = 948.0
+offset_bottom = 168.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_w60tn")
+stretch_mode = 5
+script = ExtResource("3_ccgj5")
+hover_scale = Vector2(1.01, 1.01)
+tween_duration = 0.945
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=320784864]
 stream = ExtResource("5_ccgj5")
