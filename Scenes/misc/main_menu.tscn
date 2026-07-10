@@ -33,6 +33,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_tlgvt")
 stretch_mode = 5
 script = ExtResource("3_ccgj5")
+audio_player_path = NodePath("../AudioStreamPlayer2D")
 
 [node name="settings" type="TextureButton" parent="Button Manager" unique_id=480691901]
 layout_mode = 0
@@ -44,6 +45,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("3_ssnd4")
 stretch_mode = 5
 script = ExtResource("3_ccgj5")
+audio_player_path = NodePath("../AudioStreamPlayer2D")
 
 [node name="quit" type="TextureButton" parent="Button Manager" unique_id=126700668]
 layout_mode = 0
@@ -53,6 +55,7 @@ offset_right = 256.0
 offset_bottom = 512.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 script = ExtResource("3_ccgj5")
+audio_player_path = NodePath("../AudioStreamPlayer2D")
 
 [node name="title" type="TextureButton" parent="Button Manager" unique_id=1994315248]
 layout_mode = 1
