@@ -22,7 +22,7 @@ func _on_mouse_entered() -> void:
 		.set_ease(Tween.EASE_OUT)
 	
 	var sound_node = get_node_or_null(audio_player_path)
-	if sound_node is AudioStreamPlayer: #Play loaded sound if audio stream player is valid
+	if sound_node: #Play loaded sound if audio stream player is valid
 		sound_node.stream = hitSound
 		sound_node.play() 
 		
@@ -38,9 +38,10 @@ func _on_mouse_exited() -> void:
 		
 	var sound_node = get_node_or_null(audio_player_path)
 	
-	if sound_node is AudioStreamPlayer: #Play loaded sound if audio stream player is valid
-		sound_node.stream = boingSound
+	if sound_node: #Play loaded sound if audio stream player is valid
+		sound_node.stream = hitSound
 		sound_node.play()
 		
 		if AudioDebug == true:
 			print("A piece of audio has allegedly been played")
+			

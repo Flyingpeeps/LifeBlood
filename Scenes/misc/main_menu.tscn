@@ -79,6 +79,8 @@ stream = ExtResource("6_w60tn")
 autoplay = true
 bus = &"Music"
 
+[connection signal="button_up" from="Button Manager/play" to="." method="_on_play_button_up"]
 [connection signal="pressed" from="Button Manager/play" to="." method="_on_play_pressed"]
+[connection signal="button_up" from="Button Manager/settings" to="." method="_on_settings_button_up"]
 [connection signal="pressed" from="Button Manager/settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button Manager/quit" to="." method="_on_quit_pressed"]
