@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://bhi1is8xj6d3"]
 
+[ext_resource type="FontFile" uid="uid://cisrsr0x7rnwt" path="res://Assets/Art/Fonts/PixelWriter/PixelWriterV5.ttf" id="1_5ltab"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
+line_spacing = 0.0
+font = ExtResource("1_5ltab")
+font_size = 88
+
 [node name="Node2D" type="Node2D" unique_id=2015525231]
+
+[node name="Label" type="Label" parent="." unique_id=1585379969]
+offset_top = 8.0
+offset_right = 1152.0
+offset_bottom = 75.0
+label_settings = SubResource("LabelSettings_bhunq")
+horizontal_alignment = 1
+vertical_alignment = 1

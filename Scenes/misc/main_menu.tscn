@@ -80,7 +80,6 @@ autoplay = true
 bus = &"Music"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=744968356]
-position = Vector2(576, 320)
 anchor_mode = 0
 
 [connection signal="button_up" from="Button Manager/play" to="." method="_on_play_button_up"]
