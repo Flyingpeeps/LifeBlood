@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide() # Apply the velocity to the character
 
 func _movement(delta: float) -> void:
-	# Get 8-way input vector and normalize it so diagonal isn't faster
+	# Normalizes speed to avoid strafing boost. debateable.
 	var input_vector = Vector2(
 		Input.get_action_strength("right") - Input.get_action_strength("left"),
 		Input.get_action_strength("down") - Input.get_action_strength("up")
