@@ -48,6 +48,7 @@ columns = 2
 
 [node name="Master Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=29105882]
 layout_mode = 2
+theme_override_font_sizes/font_size = 20
 text = "Master Volume"
 
 [node name="MasterSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=793137705]
@@ -60,6 +61,7 @@ step = 8.0
 
 [node name="Music Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1748967341]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "Music Volume"
 
 [node name="MusicSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1111183562]
@@ -73,6 +75,7 @@ scrollable = false
 
 [node name="UI Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=718126871]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "UI Volume"
 
 [node name="UISlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1237864557]
@@ -86,6 +89,7 @@ scrollable = false
 
 [node name="SFX Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1130097264]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "SFX Volume"
 
 [node name="SFXSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=810790873]
@@ -117,5 +121,9 @@ horizontal_alignment = 1
 [node name="Back" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1974351945]
 layout_mode = 2
 text = "Back"
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer" unique_id=441281720]
+anchor_mode = 0
+zoom = Vector2(0.28, 0.28)
 
 [connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
