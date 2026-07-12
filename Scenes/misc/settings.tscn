@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhi1is8xj6d3"]
 
 [ext_resource type="FontFile" uid="uid://cisrsr0x7rnwt" path="res://Assets/Art/Fonts/PixelWriter/PixelWriterV5.ttf" id="1_5ltab"]
+[ext_resource type="Script" uid="uid://bef12abvyfnbp" path="res://Scripts/settings.gd" id="1_cv8q4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
 line_spacing = 0.0
@@ -8,11 +9,111 @@ font = ExtResource("1_5ltab")
 font_size = 88
 
 [node name="Node2D" type="Node2D" unique_id=2015525231]
+script = ExtResource("1_cv8q4")
 
-[node name="Label" type="Label" parent="." unique_id=1585379969]
-offset_top = 8.0
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1173029263]
 offset_right = 1152.0
-offset_bottom = 75.0
+offset_bottom = 648.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=75672241]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer" unique_id=1671506214]
+layout_mode = 2
+
+[node name="SETTINGS" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1585379969]
+layout_mode = 2
+text = "Settings"
 label_settings = SubResource("LabelSettings_bhunq")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="30px" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=919177304]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1894190870]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Volume"
+horizontal_alignment = 1
+
+[node name="10px" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1915526827]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=2140872872]
+layout_mode = 2
+columns = 2
+
+[node name="Master Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=29105882]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=793137705]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -80.0
+max_value = 6.0
+step = 8.0
+
+[node name="Music Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1748967341]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1111183562]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -80.0
+max_value = 6.0
+step = 8.0
+scrollable = false
+
+[node name="UI Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=718126871]
+layout_mode = 2
+text = "UI Volume"
+
+[node name="UISlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1237864557]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -80.0
+max_value = 6.0
+step = 8.0
+scrollable = false
+
+[node name="SFX Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=1130097264]
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SFXSlider" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer/GridContainer" unique_id=810790873]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -80.0
+max_value = 6.0
+step = 8.0
+scrollable = false
+
+[node name="10px2" type="HSeparator" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1681543066]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="CROSSHAIRS" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1638319109]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Crosshairs"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=192758466]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.49411765)
+theme_override_font_sizes/font_size = 16
+text = "[WIP]"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1974351945]
+layout_mode = 2
+text = "Back"

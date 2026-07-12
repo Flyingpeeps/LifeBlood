@@ -1,3 +1,76 @@
 [gd_scene format=3 uid="uid://cpxvhf20eu1c"]
 
-[node name="Node2D" type="Node2D" unique_id=1214633412]
+[ext_resource type="Script" uid="uid://bqtu1wj3musnd" path="res://Scripts/player.gd" id="1_6i88y"]
+[ext_resource type="Texture2D" uid="uid://h2kdsk6msclf" path="res://Assets/Art/Placeholders/updownleftright/example_right.png" id="1_631to"]
+
+[sub_resource type="Animation" id="Animation_6i88y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_r27mg"]
+resource_name = "roll"
+
+[sub_resource type="Animation" id="Animation_jd0ql"]
+resource_name = "roll_left_ccw_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.283185307179586]
+}
+
+[sub_resource type="Animation" id="Animation_dv403"]
+resource_name = "roll_right_cw"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wrxtf"]
+_data = {
+&"RESET": SubResource("Animation_6i88y"),
+&"roll": SubResource("Animation_r27mg"),
+&"roll_left_ccw_2": SubResource("Animation_jd0ql"),
+&"roll_right_cw": SubResource("Animation_dv403")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(32, 24)
+
+[node name="player" type="CharacterBody2D" unique_id=489261202]
+script = ExtResource("1_6i88y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1630734353]
+texture = ExtResource("1_631to")
+
+[node name="RollAnim" type="AnimationPlayer" parent="Sprite2D" unique_id=1575689090]
+libraries/ = SubResource("AnimationLibrary_wrxtf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898137390]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_bhunq")
