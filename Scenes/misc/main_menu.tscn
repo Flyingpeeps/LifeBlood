@@ -77,7 +77,6 @@ tween_duration = 0.945
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=320784864]
 stream = ExtResource("6_w60tn")
 autoplay = true
-bus = &"Music"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=744968356]
 anchor_mode = 0

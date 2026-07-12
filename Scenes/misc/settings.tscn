@@ -32,7 +32,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1894190870]
+[node name="Volume" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1894190870]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Volume"
@@ -117,3 +117,5 @@ horizontal_alignment = 1
 [node name="Back" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1974351945]
 layout_mode = 2
 text = "Back"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
