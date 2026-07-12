@@ -78,8 +78,9 @@ tween_duration = 0.945
 stream = ExtResource("6_w60tn")
 autoplay = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=744968356]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=868389222]
 anchor_mode = 0
+zoom = Vector2(0.28, 0.28)
 
 [connection signal="button_up" from="Button Manager/play" to="." method="_on_play_button_up"]
 [connection signal="pressed" from="Button Manager/play" to="." method="_on_play_pressed"]

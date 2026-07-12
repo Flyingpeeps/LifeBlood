@@ -74,3 +74,8 @@ libraries/ = SubResource("AnimationLibrary_wrxtf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898137390]
 position = Vector2(0, 20)
 shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1968395586]
+zoom = Vector2(0.28, 0.28)
+position_smoothing_enabled = true
+position_smoothing_speed = 18.465
