@@ -50,7 +50,7 @@ func _on_ui_changed(value): _apply_volume("UI", value); save_settings()
 func _on_sfx_changed(value): _apply_volume("SFX", value); save_settings()
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/game/level1.tscn") # Go back to the game
+	get_tree().change_scene_to_file("res://Scenes/misc/main_menu.tscn") # Go back to the game
 
 # Function for comminucation with audio engggine
 func _apply_volume(bus_name: String, value: float) -> void:
