@@ -63,6 +63,13 @@ _data = {
 [node name="Main menu" type="Node2D" unique_id=645651199]
 script = ExtResource("1_vkhyn")
 
+[node name="Back" type="Button" parent="." unique_id=892638373]
+offset_left = -832.0
+offset_top = 464.0
+offset_right = -320.0
+offset_bottom = 576.0
+text = "Back"
+
 [node name="Button Manager" type="Control" parent="." unique_id=155291693]
 layout_mode = 3
 anchors_preset = 0
@@ -139,8 +146,9 @@ zoom = Vector2(0.28, 0.28)
 libraries/ = SubResource("AnimationLibrary_shqk1")
 
 [node name="Node2D" parent="." unique_id=2015525231 instance=ExtResource("7_55yig")]
-position = Vector2(-1152, 0)
+position = Vector2(-1144, -16)
 
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="button_up" from="Button Manager/play" to="." method="_on_play_button_up"]
 [connection signal="pressed" from="Button Manager/play" to="." method="_on_play_pressed"]
 [connection signal="button_up" from="Button Manager/settings" to="." method="_on_settings_button_up"]

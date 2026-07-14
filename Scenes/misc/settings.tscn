@@ -118,12 +118,6 @@ theme_override_font_sizes/font_size = 16
 text = "[WIP]"
 horizontal_alignment = 1
 
-[node name="Back" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer" unique_id=1974351945]
-layout_mode = 2
-text = "Back"
-
 [node name="Camera2D" type="Camera2D" parent="CenterContainer" unique_id=441281720]
 anchor_mode = 0
 zoom = Vector2(0.28, 0.28)
-
-[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

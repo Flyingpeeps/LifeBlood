@@ -16,3 +16,7 @@ func _on_quit_pressed() -> void:
 	
 func _on_settings_button_up() -> void:
 	anim_player.play("move_left")
+
+
+func _on_back_pressed() -> void:
+	anim_player.play("move_right")
